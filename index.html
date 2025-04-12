@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hal-Hal Favoritku</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-image: url('pastel.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            text-align: center;
+            color: black;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            background-color: #333;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #f06292;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .drama, .music, .makanan {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .drama section, .music section, .makanan section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: 300px;
+        }
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        .music-pulang {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Hal-Hal Favoritku</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a onclick="openTab('drama')">Drama</a></li>
+            <li><a onclick="openTab('music')">Music</a></li>
+            <li><a onclick="openTab('makanan')">Makanan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="drama" class="tab-content active">
+            <div class="drama">
+                <section>
+                    <h2>Drama - The Trauma Code</h2>
+                    <p>Drama ini menceritakan seorang dokter ahli bedah jenius yang telah melakukan operasi di zona konflik di seluruh dunia...</p>
+                    <ul>
+                        <li>Penting memiliki komitmen yang tinggi</li>
+                        <li>Kerja sama tim menjadi kunci</li>
+                        <li>Setiap detik sangat berarti</li>
+                    </ul>
+                    <img src="the-trauma-code-heroes-on-call.jpg" alt="Poster drama The Trauma Code">
+                </section>
+
+                <section>
+                    <h2>Drama - When Life Gives You Tangerines</h2>
+                    <p>Drama ini menceritakan perjuangan dan pengorbanan dalam kehidupan pedesaan</p>
+                    <ul>
+                        <li>peran seorang ayah dapat banget kepada anak-anaknya </li>
+                        <li>peran suami menjadi idaman para wanita</li>
+                        <li>suka dengan aktor wanita nya IU</li>
+                    </ul>
+                    <img src="when life-drama.jpg" alt="Poster drama When Life Gives You Tangerines">
+                </section>
+
+                <section>
+                    <h2>Drama - Extraordinary You</h2>
+                    <p>Kisah karakter dalam komik yang menyadari mereka tidak punya kendali atas jalan hidup mereka.</p>
+                    <ul>
+                        <li>aktor nya adalah favorit saya</li>
+                        <li>film nya lucu dan tidak membosankan</li>
+                        <li>cerita yang berpikir untuk merubah takdir </li>
+                    </ul>
+                    <img src="extraordinary you.jpg" alt="Poster drama Extraordinary You">
+                </section>
+            </div>
+        </div>
+
+        <div id="music" class="tab-content">
+            <div class="music">
+                <section>
+                    <h2>Musik - Pulang</h2>
+                    <p>Lagu ini menenangkan dan liriknya sangat menyentuh hati</p>
+                    <ul>
+                        <li>Ketika kehilangan arah, Tuhanlah tujuannya</li>
+                        <li>Panggilan untuk kembali</li>
+                        <li>Pengharapan dan pengampunan</li>
+                    </ul>
+                    <div class="music-pulang">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2T0rALVR1oFaViobfyUAt4?utm_source=generator" 
+                        width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Musik - You will be in my heart</h2>
+                    <p>lagu yang indah, penuh kasih sayang dan janji perlindungan selamanya.</p>
+                    <ul>
+                        <li>suka dengan liriknya yang hangat</li>
+                        <li>suka dengan penyanyinya dan suara nya yang merdu</li>
+                        <li>banyak pesan yang bermakna dari lirik ini</li>
+                    </ul>
+                    <div class="music-You will be in my heart">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1UPB5rYJ0bzn6mNSoAHrZC?utm_source=generator" 
+                        width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Musik - Lebih dalam kumenyembah</h2>
+                    <p>lagu penyembahan yang indah dan penuh kerinduan kepada Tuhan.</p>
+                    <ul>
+                        <li>memngungkapkan cinta yang dalam kepada Tuhan</li>
+                        <li>musik, lirik membuat saya merasakan betapa indahnya</li>
+                        <li>membawa suasana tenang dan damai/li>
+                    </ul>
+                    <div class="music-lebih dalam kumenyembah">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/54KZGqYbw7XW2rnATwOkrU?utm_source=generator" 
+                        width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="makanan" class="tab-content">
+            <div class="makanan">
+                <section>
+                    <h2>Es Krim - Stroberi</h2>
+                    <p>Saya menyukai es krim rasa stroberi karena bentuk buahnya yang lucu dan warnanya yang cantik</p>
+                    <ul>
+                        <li>Rasa stroberi identik dengan asam & manis</li>
+                        <li>Tekstur lembut dan creamy yang menyatu</li>
+                        <li>Warna pink dan merah yang cantik</li>
+                    </ul>
+                    <img src="escream-strawberry.jpg" alt="Es krim rasa stroberi">
+                </section>
+
+                <section>
+                    <h2>Dimsum Mentai</h2>
+                    <p>makanan favorit yang bikin nambah terus karna penuh dengan 
+                        rasa pedas, manis dan asam</p>
+                    <ul>
+                        <li>sentuhan gurih yang pas</li>
+                        <li>berbagai banyak cita rasa yang bikin nikmat</li>
+                        <li>kuah yang enak dan menyegarkan dimakan saat keadaan panas</li>
+                    </ul>
+                    <img src="Sayur Asam.jpg" alt="sayur asam">
+                </section>
+
+                <section>
+                    <h2>Nasi Goreng Seofood</h2>
+                    <p>nasi goreng seafood adalah makanan pertama favoritku karna enak banget 
+                        dari semua makanan juga mudah dibuat</p>
+                    <ul>
+                        <li>campuran seafood bikin makanan jadi mewah dan enak</li>
+                        <li>kombinasi rasa yang sempurna</li>
+                        <li>makanan ini banyak penyukannya</li>
+                    </ul>
+                    <img src="nasigoreng.jpg" alt="nasi goreng seafood">
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Hak Cipta &copy; 2025 - Hal-Hal Favoritku</p>
+    </footer>
+
+    <script>
+        function openTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
